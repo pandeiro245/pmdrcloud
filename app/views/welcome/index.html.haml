@@ -1,14 +1,3 @@
-%h1 25分集中クラウド
-%p みんなの25分を聞いている音楽ごとシェア
-
-= form_for @workload do |f|
-  = f.text_field :title
-
-%table.table
-  - @workloads.each do |workload|
-    %tr
-      %td= workload.title
-      %td= workload.memo
-      %td= workload.started_at.to_s.slice(0, 16) # TODO .strftime("%Y-%m-%d %H:%I") だと時間がずれる
-      %td= workload.music.title
+= render 'shared/new_workload'
+= render 'shared/workloads'
 

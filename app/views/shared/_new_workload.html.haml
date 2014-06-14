@@ -1,0 +1,5 @@
+= form_for @workload do |f|
+  = f.text_field :title, {placeholder: '没頭したいことを入力してエンターキーを押してください', style:'width:500px; height:60px; font-size:50px;'}
+  - unless @music.nil?
+    = f.hidden_field :music_id, value
+

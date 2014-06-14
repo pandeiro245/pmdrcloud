@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title 没頭クラウド
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    = csrf_meta_tags
+  %body{align: 'center'}
+    %div
+      = link_to 'ねこびーむのLINEスタンプ好評発売中！', 'https://store.line.me/stickershop/detail?packageId=1000691', {target: '_blank'}
+    = image_tag 'neco-beam.png'
+    %h1 没頭クラウド
+    %p あの人が没頭できたパワーソングを聴きながら作業に没頭できます
+    = flash["alert"]
+    = yield

@@ -1,0 +1,8 @@
+%table.table
+  - @workloads.each do |workload|
+    %tr
+      %td= workload.title
+      %td= workload.memo
+      %td= workload.started_at.to_s.slice(0, 16) # TODO .strftime("%Y-%m-%d %H:%I") だと時間がずれる
+      %td= link_to workload.music.title, "/#{workload.music_id}"
+

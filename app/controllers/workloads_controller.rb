@@ -2,7 +2,8 @@ class WorkloadsController < ApplicationController
   def create
     @workload = Workload.new(workload_params)
     @workload.started_at = Time.now
-    music = Music.order("RAND()").first
+    # music = Music.order("RAND()").first #MySQL
+    music = Music.order("RANDOM()").first #SQLite
     @workload.music_id = music.id
     @workload.save
     redirect_to music_path(music)
