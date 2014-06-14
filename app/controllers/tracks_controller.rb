@@ -1,6 +1,6 @@
 class TracksController < ApplicationController
   def index
-    id = params[:q]
+    id = URI.encode(params[:q])
     redirect_to "/tracks/#{id}"
   end
 

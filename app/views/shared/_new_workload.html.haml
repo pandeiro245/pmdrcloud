@@ -1,5 +1,11 @@
-= form_for @workload do |f|
-  = f.text_field :title, {placeholder: '没頭したいことを入力してエンターキーを押してください', style:'width:100%; font-size:50px; padding:10px; margin:10px;'}
-  - unless @music.nil?
-    = f.hidden_field :music_id, value: @music.id
+- ph = '没頭したいことを入力してエンターキーを押してください'
+- style = 'width:100%; font-size:50px; padding:10px; margin:10px;'
+
+%input{placeholder: ph, style: style, id: '#todo'}
+
+- if false
+  = form_for @workload do |f|
+    = f.text_field :title, {placeholder: ph, style: style}
+    - unless @music.nil?
+      = f.hidden_field :music_id, value: @music.id
 

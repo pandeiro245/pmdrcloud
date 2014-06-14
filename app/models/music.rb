@@ -1,8 +1,6 @@
 class Music < ActiveRecord::Base
-  def self.add path
-    client_id = '2b9312964a1619d99082a76ad2d6d8c6'
-    id = Track.new(client_id).path_to_id(path)
-    Music.find_or_create_by(soundcloud_id: id)
+  def self.add track_id
+    Music.find_or_create_by(soundcloud_id: track_id)
   end
 
   def sync

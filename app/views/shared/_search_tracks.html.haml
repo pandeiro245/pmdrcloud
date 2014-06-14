@@ -1,4 +1,11 @@
-%h2 自分が好きな曲で没頭したいばあいはこちら
-= form_tag '/tracks', class_name: 'Track', method: 'get' do
-  = text_field_tag :q, nil, {placeholder: 'アーティスト名 or 曲名を入力', style:'width:100%; font-size:50px; padding:10px; margin:10px;'}
+- #%h2 自分が好きな曲で没頭したいばあいはこちら
+
+- ph = 'アーティスト名 or 曲名を入力'
+- style = 'width:100%; font-size:50px; padding:10px; margin:10px;'
+
+%input{placeholder: ph, style: style, id: 'track'}
+
+- if false
+  = form_tag '/tracks', class_name: 'Track', method: 'get' do
+    = text_field_tag :q, nil, {placeholder: ph, style: style}
 
