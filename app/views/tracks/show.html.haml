@@ -1,0 +1,16 @@
+%table.table
+  - @tracks.each do |t|
+    %tr
+      %td=t.id
+      %td=t.title
+      %td=image_tag t.artwork_url
+      %td=t.bpm
+      %td=t.favoritings_count
+      %td=t.genre
+      - i = (t.duration/1000).to_i
+      - min = (i/60).to_i
+      - sec = i - min*60
+      %td="#{min}分#{sec}秒"
+
+
+

@@ -10,8 +10,8 @@
   %body{align: 'center'}
     %div
       = link_to 'ねこびーむのLINEスタンプ好評発売中！', 'https://store.line.me/stickershop/detail?packageId=1000691', {target: '_blank'}
-    = image_tag 'neco-beam.png'
+    = link_to (image_tag 'neco-beam.png'), root_path
     %h1 没頭クラウド
-    %p あの人が没頭できたパワーソングを聴きながら作業に没頭できます
+    %p あの人が没頭できた時に聴いていたパワーソングを聴きながら作業に没頭できます
     = flash["alert"]
     = yield
