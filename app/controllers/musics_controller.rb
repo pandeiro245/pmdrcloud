@@ -1,7 +1,6 @@
 class MusicsController < ApplicationController
   def index
-    music = Music.add params[:track_id]
-    redirect_to "/#{music.id}"
+    render json: Music.first.soundcloud_id.to_json
   end
 
   def show
